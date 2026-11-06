@@ -29,22 +29,31 @@ function playRound(computerChoice, humanChoice){
     }
     else if(computerChoice==="Rock" && humanChoice === "Scissors"){
         console.log("Computer Wins!");
-        computerScore = computerScore++;
+        computerScore++;
     }
     else if(computerChoice==="Paper" && humanChoice === "Rock"){
         console.log("Computer Wins!");
-        computerScore = computerScore++;
+        computerScore++;
     }
     else if(computerChoice === "Scissors" && humanChoice === "Paper"){
         console.log("Computer Wins!");
-        computerScore = computerScore++;
+        computerScore++;
     }
     else{
         console.log("Human wins!");
-        humanscore = humanScore++;
+        humanScore++;
+    }
+
+    console.log(`Human Score: ${humanScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+
+}
+
+function playGame(){
+    for(i=1;i<6;i++){
+        console.log(`This is round ${i}`);
+        playRound(getComputerChoice(), getHumanChoice());
     }
 }
 
-console.log(playRound(getComputerChoice(), getHumanChoice()));
-console.log(`Computer Score: ${computerScore}`);
-console.log(`Human Score: ${humanScore}`);
+playGame();
