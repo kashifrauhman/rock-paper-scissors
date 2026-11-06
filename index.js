@@ -15,4 +15,10 @@ function getComputerChoice(){
     return computerChoice;
 }
 
-console.log(getComputerChoice);
+function getHumanChoice(){
+    let humanChoice = prompt("Whats your choice?");
+    humanChoice = humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1).toLowerCase;
+    return humanChoice;
+}
+
+console.log(getHumanChoice());
